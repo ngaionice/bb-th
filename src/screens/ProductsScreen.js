@@ -24,7 +24,7 @@ import TextField from "../components/TextField";
 import RadioButtons from "../components/RadioButtons";
 
 function ProductFormSection({ formData, modifier, dispatch }) {
-  const { display_name, type, config, option_values } = modifier;
+  const { display_name, type, config, option_values, required } = modifier;
   if (type === "text") {
     return (
       <TextField
@@ -32,6 +32,7 @@ function ProductFormSection({ formData, modifier, dispatch }) {
         label={display_name}
         dispatch={dispatch}
         config={config}
+        required={required}
       />
     );
   } else if (type === "radio_buttons") {

@@ -1,8 +1,7 @@
 import { TextField as MuiTextField } from "@mui/material";
 import { useState } from "react";
 
-function TextField({ formData, label, config, dispatch }) {
-  // if I had more time, implement validation here
+function TextField({ formData, label, config, required, dispatch }) {
   const {
     default_value,
     text_characters_limited: is_limited,
@@ -37,7 +36,7 @@ function TextField({ formData, label, config, dispatch }) {
       onChange={handleChange}
       fullWidth
       size="small"
-      required
+      required={required}
       helperText={
         error ? `Name has to be between ${min} and ${max} characters` : ""
       }
