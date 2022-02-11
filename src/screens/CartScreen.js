@@ -41,16 +41,12 @@ function CartItem({ data, id }) {
         </Stack>
       </Grid>
       <Grid item xs={6} sm={5} lg={4} container alignItems="center">
-        <Grid item xs={2} lg={1}>
-          <Typography variant="body1">Qty:</Typography>
-        </Grid>
-
-        <Grid item xs={2} lg={1}>
-          <Typography variant="body1">{quantity}</Typography>
-        </Grid>
-
         <Grid item xs={8} lg={10}>
           <QuantityControl data={data} id={id} />
+        </Grid>
+
+        <Grid item xs={4} lg={2}>
+          <Typography variant="body1">{`Qty:${quantity}`}</Typography>
         </Grid>
       </Grid>
     </>
