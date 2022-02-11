@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, Container, CssBaseline, ThemeProvider } from "@mui/material";
+import { CartProvider } from "./context/cartContext";
+
+import AppBar from "./components/AppBar";
+import ProductsScreen from "./screens/ProductsScreen";
+import { Route, Routes } from "react-router-dom";
+import CartScreen from "./screens/CartScreen";
+import { theme } from "./theme";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="lg">
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <CartProvider>
+          <AppBar />
+          <Box sx={{ padding: 4 }}>
+            <Routes>
+              <Route path="/" element={<ProductsScreen />} />
+              <Route path="/cart" element={<CartScreen />} />
+            </Routes>
+          </Box>
+        </CartProvider>
+      </ThemeProvider>
+    </Container>
   );
 }
 
