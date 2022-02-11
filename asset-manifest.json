@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/bb/static/js/main.52c4b399.js",
-    "index.html": "/bb/index.html",
-    "main.52c4b399.js.map": "/bb/static/js/main.52c4b399.js.map"
+    "main.js": "/bb-th/static/js/main.52c4b399.js",
+    "index.html": "/bb-th/index.html",
+    "main.52c4b399.js.map": "/bb-th/static/js/main.52c4b399.js.map"
   },
   "entrypoints": [
     "static/js/main.52c4b399.js"
