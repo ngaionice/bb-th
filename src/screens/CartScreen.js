@@ -35,9 +35,7 @@ function CartItem({ data, id }) {
       <Grid item xs={6} sm={7} lg={8}>
         <Stack>
           <Typography variant="body1">{name}</Typography>
-          <Typography variant="body2">
-            {subscribe ? "Monthly" : "One-time"}
-          </Typography>
+          <Typography variant="body2">{subscribe}</Typography>
         </Stack>
       </Grid>
       <Grid item xs={6} sm={5} lg={4} container alignItems="center">
